@@ -4,10 +4,18 @@ import Icon from "@/components/ui/icon";
 const HERO_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/bucket/3fc05f4e-b4c8-43d4-ad85-f39571c8ef6c.jpg";
 const DMITRY_IMG = "https://cdn.poehali.dev/files/8e8ce9a6-dacf-485e-a5c3-a4c9a001e7eb.JPG";
 const TURTLE_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/files/c5c845a1-690e-40f4-bd4f-d28ed0d2d67d.jpg";
-const SUNSET_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/files/46e52d9b-e85f-4937-b8ec-f6649b9e057e.jpg";
-const BEACH_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/files/72640b8b-8850-4b7e-9e95-588d17bff73e.jpg";
-const MOUNTAIN_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/files/284f6009-1382-47b3-bacc-919e92a086e5.jpg";
 const COAST_IMG = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/files/81b6f36d-1dac-4569-b6f5-5735f5d74a69.jpg";
+
+// Новые реальные фото Кабо-Верде
+const BEACH_PEOPLE_IMG = "https://cdn.poehali.dev/files/de14ead5-eb7d-400f-ad40-7d7a30b38716.jpg"; // пляж с людьми
+const AERIAL_PORT_IMG  = "https://cdn.poehali.dev/files/c5086a16-15e3-428e-90ea-4666de1e520d.jpg"; // аэро пирс
+const SHIPWRECK_IMG    = "https://cdn.poehali.dev/files/4320424f-bf3a-400f-b484-fa543956b3c6.jpg"; // затонувший корабль
+const VILLAGE_IMG      = "https://cdn.poehali.dev/files/6af80fbb-a05b-4205-959a-db65fba73eeb.jpg"; // деревня на скале
+const HARBOR_IMG       = "https://cdn.poehali.dev/files/1c7ac8e5-cc1a-4aa8-b899-0a7ddf174d6d.jpg"; // гавань с яхтами
+const CITY_AERIAL_IMG  = "https://cdn.poehali.dev/files/f5375d5c-bb56-4372-8ae3-9a3cd4f6277e.jpg"; // маяк аэро
+const MOUNTAIN_TOWN_IMG = "https://cdn.poehali.dev/files/032dd4c5-51ef-4c9f-95c2-96918c4b621e.jpg"; // горы+деревня
+const PORT_AERIAL_IMG  = "https://cdn.poehali.dev/files/cae362a0-67ee-4f68-9a9c-4fa4c688e5d8.jpg"; // порт сверху
+const PIER_IMG         = "https://cdn.poehali.dev/files/c30b5677-cb97-424b-89e1-fc31178071bb.jpg"; // пирс лодки люди
 
 // Акцентные цвета для инфографики
 const ACCENT = {
@@ -198,7 +206,7 @@ export default function Index() {
       </section>
 
       {/* ЧТО ТАКОЕ */}
-      <section className="py-20 bg-[#0D1119]">
+      <section className="py-20" style={{ background: "linear-gradient(135deg, #0D1119 0%, #0A1628 100%)" }}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Reveal>
             <Label color="gold">Суть тренинга</Label>
@@ -214,7 +222,7 @@ export default function Index() {
       </section>
 
       {/* АВТОР */}
-      <section id="author" className="py-28 px-6">
+      <section id="author" className="py-28 px-6" style={{ background: "linear-gradient(180deg, #0A0E14 0%, #071020 60%, #0A0E14 100%)" }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative">
@@ -256,18 +264,19 @@ export default function Index() {
             <Label color="blue">Место силы</Label>
             <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-center mb-4 uppercase">Cabo Verde</h2>
             <p className="text-white/45 text-center text-sm leading-relaxed max-w-2xl mx-auto mb-12">
-              Атлантика, вулканические горы, белые пляжи с бирюзовой водой — не курорт, а пространство для настоящей внутренней работы.
+              Бирюзовый океан, белые пляжи, вулканы, затонувший корабль и колониальные деревни — Кабо-Верде не похоже ни на что другое.
             </p>
           </Reveal>
 
+          {/* Главное большое фото */}
           <Reveal>
-            <div className="relative overflow-hidden cursor-pointer mb-3 group" onClick={() => setLightbox(SUNSET_IMG)}>
-              <img src={SUNSET_IMG} alt="Закат" className="w-full h-[55vh] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="relative overflow-hidden cursor-pointer mb-3 group" onClick={() => setLightbox(AERIAL_PORT_IMG)}>
+              <img src={AERIAL_PORT_IMG} alt="Аэро" className="w-full h-[55vh] object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07090D]/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
                 <div>
-                  <span className={`text-[10px] tracking-[0.25em] uppercase font-bold ${ACCENT.orange.text}`}>Закат</span>
-                  <p className="font-display text-2xl font-bold text-white uppercase mt-1">Над Атлантикой</p>
+                  <span className={`text-[10px] tracking-[0.25em] uppercase font-bold ${ACCENT.blue.text}`}>Аэросъёмка</span>
+                  <p className="font-display text-2xl font-bold text-white uppercase mt-1">Остров Сал · Пирс и бирюзовый залив</p>
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity w-10 h-10 bg-white/10 flex items-center justify-center">
                   <Icon name="Expand" size={16} className="text-white" />
@@ -276,11 +285,12 @@ export default function Index() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-3 gap-3">
+          {/* Сетка 3 колонки */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
             {[
-              { img: BEACH_IMG, label: "Белые пляжи", sub: "Пальмы и океан", color: "blue" },
-              { img: MOUNTAIN_IMG, label: "Вулканы", sub: "Дикая природа", color: "orange" },
-              { img: COAST_IMG, label: "Побережье", sub: "Скалы и волны", color: "red" },
+              { img: BEACH_PEOPLE_IMG, label: "Пляж Санта-Мария", sub: "Белый песок", color: "blue" },
+              { img: SHIPWRECK_IMG,    label: "Затонувший корабль", sub: "Символ прошлого", color: "orange" },
+              { img: VILLAGE_IMG,      label: "Деревня на скале", sub: "Старый город", color: "red" },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.1}>
                 <div className="relative overflow-hidden cursor-pointer group aspect-[4/3]" onClick={() => setLightbox(item.img)}>
@@ -291,6 +301,63 @@ export default function Index() {
                     <p className="font-display text-sm font-bold text-white uppercase">{item.label}</p>
                   </div>
                   <div className={`absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity ${ACCENT[item.color as keyof typeof ACCENT].bg}`} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Ещё ряд 3 фото */}
+          <div className="grid grid-cols-3 gap-3">
+            {[
+              { img: HARBOR_IMG,       label: "Гавань Миндело", sub: "Яхты и горы", color: "blue" },
+              { img: MOUNTAIN_TOWN_IMG, label: "Горный берег", sub: "Пальмы у океана", color: "gold" },
+              { img: PORT_AERIAL_IMG,  label: "Порт Сан-Висенти", sub: "Панорама", color: "orange" },
+            ].map((item, i) => (
+              <Reveal key={item.label} delay={i * 0.1}>
+                <div className="relative overflow-hidden cursor-pointer group aspect-[4/3]" onClick={() => setLightbox(item.img)}>
+                  <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <span className={`text-[9px] tracking-[0.2em] uppercase font-bold ${ACCENT[item.color as keyof typeof ACCENT].text}`}>{item.sub}</span>
+                    <p className="font-display text-sm font-bold text-white uppercase">{item.label}</p>
+                  </div>
+                  <div className={`absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity ${ACCENT[item.color as keyof typeof ACCENT].bg}`} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* СООБЩЕСТВО — фон с людьми на пирсе */}
+      <section className="relative py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={PIER_IMG} alt="Люди на пирсе" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14]/80 via-[#0A0E14]/65 to-[#0A0E14]" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6">
+          <Reveal>
+            <Label color="orange">Ты не один</Label>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-center mb-6 uppercase">
+              Окружение <span className="text-[#F97316]">решает всё</span>
+            </h2>
+            <p className="text-white/65 text-center text-base leading-relaxed max-w-2xl mx-auto mb-12 font-light">
+              Рядом с тобой будут люди, которые тоже выбрали честность с собой. Не случайная группа — выбранное окружение, которое становится частью твоего нового пути.
+            </p>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { icon: "Heart", title: "Живой контакт", desc: "4 дня настоящего, без масок и социальных ролей.", color: "orange" },
+              { icon: "Zap", title: "Общая энергия", desc: "Группа усиливает каждого — это не метафора, это физика.", color: "blue" },
+              { icon: "Users", title: "После тренинга", desc: "Люди остаются в контакте. Сообщество продолжает жить.", color: "gold" },
+            ].map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.12}>
+                <div className={`bg-white/5 backdrop-blur-sm border border-white/10 p-7 hover:bg-white/10 transition-colors duration-300`}>
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
+                    <Icon name={item.icon as "Heart"} size={18} className={ACCENT[item.color as keyof typeof ACCENT].text} />
+                  </div>
+                  <p className="font-display text-lg text-white font-bold uppercase mb-2">{item.title}</p>
+                  <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -351,7 +418,7 @@ export default function Index() {
       </section>
 
       {/* РЕЗУЛЬТАТ */}
-      <section className="py-24 bg-[#0D1119]">
+      <section className="py-24" style={{ background: "linear-gradient(135deg, #071018 0%, #0D1119 50%, #0A1420 100%)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <Reveal>
             <Label color="blue">После тренинга</Label>
@@ -538,8 +605,12 @@ export default function Index() {
       </section>
 
       {/* ЛОГИСТИКА */}
-      <section className="py-20 bg-[#0D1119]">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={CITY_AERIAL_IMG} alt="Маяк" className="w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #0A0E14/95 0%, #071828/90 100%)" }} />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6">
           <Reveal>
             <Label color="orange">Перелёт и трансфер</Label>
             <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold text-white text-center mb-12 uppercase">Как добраться</h2>
@@ -570,7 +641,7 @@ export default function Index() {
 
       {/* ФИНАЛ */}
       <section id="contacts" className="relative py-36 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${HERO_IMG})`, opacity: 0.2 }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${PORT_AERIAL_IMG})`, opacity: 0.22 }} />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14] via-[#0A0E14]/40 to-[#0A0E14]" />
         <div className="relative max-w-2xl mx-auto px-6 text-center">
           <Reveal>
