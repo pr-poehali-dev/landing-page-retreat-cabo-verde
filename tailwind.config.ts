@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+				display: ['Oswald', 'sans-serif'],
 				sans: ['Montserrat', 'sans-serif'],
 			},
 			colors: {
