@@ -208,7 +208,7 @@ export default function Index() {
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={COAST_IMG} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/92" />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.88)" }} />
         </div>
         <div className="relative max-w-3xl mx-auto px-5 text-center">
           <Reveal>
