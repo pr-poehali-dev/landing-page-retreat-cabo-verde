@@ -112,7 +112,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14]/70 via-[#0A0E14]/20 to-[#0A0E14]" />
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#061018]/50" />
 
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+        <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 pt-20">
           {/* Бейдж с акцентом */}
           <div style={{ opacity: 0, animation: "fadeIn 1.2s ease 0.2s forwards" }}
             className="inline-flex items-center gap-2 px-5 py-2 bg-[#0EA5E9]/20 border border-[#0EA5E9]/50 text-[#0EA5E9] text-xs tracking-[0.3em] uppercase mb-10 font-bold">
@@ -120,16 +120,16 @@ export default function Index() {
             6–9 августа · Атлантический океан
           </div>
 
-          <h1 className="font-display text-[clamp(4.5rem,14vw,12rem)] leading-[0.85] font-bold text-white tracking-tight mb-6 uppercase"
+          <h1 className="font-display text-[clamp(4.5rem,14vw,12rem)] leading-[0.85] font-bold text-white tracking-tight mb-6 uppercase w-full"
             style={{ opacity: 0, animation: "fadeUp 1s ease 0.4s forwards" }}>
             Пере<span className="text-[#C9A84C]">про</span>Шивка
           </h1>
 
-          <p className="text-base md:text-xl text-white/80 font-light mb-4 tracking-wide"
+          <p className="text-base md:text-xl text-white/80 font-light mb-4 tracking-wide max-w-2xl"
             style={{ opacity: 0, animation: "fadeUp 1s ease 0.7s forwards" }}>
             Выездной трансформационный тренинг <span className="text-[#C9A84C] font-semibold">Дмитрия Хара</span> в Кабо-Верде
           </p>
-          <p className="text-white/50 text-sm tracking-wide mb-12 max-w-lg mx-auto"
+          <p className="text-white/50 text-sm tracking-wide mb-12 max-w-lg"
             style={{ opacity: 0, animation: "fadeUp 1s ease 0.9s forwards" }}>
             4 дня, которые помогут убрать внутренние ограничения и выйти в новую точку жизни
           </p>
@@ -172,7 +172,8 @@ export default function Index() {
       </section>
 
       {/* ПРОБЛЕМА */}
-      <section className="py-28 px-6 max-w-5xl mx-auto">
+      <section className="py-28 px-6 bg-[#0A0E14]">
+        <div className="max-w-5xl mx-auto">
         <Reveal>
           <Label color="red">Честный вопрос</Label>
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] text-center font-bold leading-tight text-white mb-8 uppercase">
@@ -203,11 +204,16 @@ export default function Index() {
             </Reveal>
           ))}
         </div>
+        </div>
       </section>
 
-      {/* ЧТО ТАКОЕ */}
-      <section className="py-20" style={{ background: "linear-gradient(135deg, #0D1119 0%, #0A1628 100%)" }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* ЧТО ТАКОЕ — фото фон #1 */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={COAST_IMG} alt="" className="w-full h-full object-cover opacity-12" />
+          <div className="absolute inset-0 bg-[#0A0E14]/88" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
           <Reveal>
             <Label color="gold">Суть тренинга</Label>
             <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white leading-tight mb-8 uppercase">
@@ -221,8 +227,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* АВТОР */}
-      <section id="author" className="py-28 px-6" style={{ background: "linear-gradient(180deg, #0A0E14 0%, #071020 60%, #0A0E14 100%)" }}>
+      {/* АВТОР — чистый фон #2 */}
+      <section id="author" className="py-28 px-6 bg-[#0A0E14]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative">
@@ -288,9 +294,9 @@ export default function Index() {
           {/* Сетка 3 колонки */}
           <div className="grid grid-cols-3 gap-3 mb-3">
             {[
-              { img: BEACH_PEOPLE_IMG, label: "Пляж Санта-Мария", sub: "Белый песок", color: "blue" },
-              { img: SHIPWRECK_IMG,    label: "Затонувший корабль", sub: "Символ прошлого", color: "orange" },
-              { img: VILLAGE_IMG,      label: "Деревня на скале", sub: "Старый город", color: "red" },
+              { img: BEACH_PEOPLE_IMG, label: "Пляж Санта-Мария", sub: "Белый песок и люди", color: "blue" },
+              { img: SHIPWRECK_IMG,    label: "Кораблекрушение", sub: "Белый пляж острова Боавишта", color: "orange" },
+              { img: VILLAGE_IMG,      label: "Cidade Velha", sub: "Старый город на скале", color: "red" },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.1}>
                 <div className="relative overflow-hidden cursor-pointer group aspect-[4/3]" onClick={() => setLightbox(item.img)}>
@@ -309,9 +315,9 @@ export default function Index() {
           {/* Ещё ряд 3 фото */}
           <div className="grid grid-cols-3 gap-3">
             {[
-              { img: HARBOR_IMG,       label: "Гавань Миндело", sub: "Яхты и горы", color: "blue" },
-              { img: MOUNTAIN_TOWN_IMG, label: "Горный берег", sub: "Пальмы у океана", color: "gold" },
-              { img: PORT_AERIAL_IMG,  label: "Порт Сан-Висенти", sub: "Панорама", color: "orange" },
+              { img: HARBOR_IMG,        label: "Прая, столица", sub: "Аэропанорама острова Сантьягу", color: "blue" },
+              { img: MOUNTAIN_TOWN_IMG, label: "Горная деревня", sub: "Скалы острова Санту-Антан", color: "gold" },
+              { img: PORT_AERIAL_IMG,   label: "Порт Минделу", sub: "Яхты и вулканы", color: "orange" },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.1}>
                 <div className="relative overflow-hidden cursor-pointer group aspect-[4/3]" onClick={() => setLightbox(item.img)}>
@@ -385,8 +391,9 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ПРОГРАММА */}
-      <section id="program" className="py-28 px-6 max-w-5xl mx-auto">
+      {/* ПРОГРАММА — чистый фон #4 */}
+      <section id="program" className="py-28 px-6 bg-[#0A0E14]">
+      <div className="max-w-5xl mx-auto">
         <Reveal>
           <Label color="orange">4 дня · 6–9 августа</Label>
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-center mb-14 uppercase">Программа</h2>
@@ -415,11 +422,16 @@ export default function Index() {
             </Reveal>
           ))}
         </div>
+      </div>
       </section>
 
-      {/* РЕЗУЛЬТАТ */}
-      <section className="py-24" style={{ background: "linear-gradient(135deg, #071018 0%, #0D1119 50%, #0A1420 100%)" }}>
-        <div className="max-w-5xl mx-auto px-6">
+      {/* РЕЗУЛЬТАТ — фото фон #5 */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={BEACH_PEOPLE_IMG} alt="" className="w-full h-full object-cover opacity-10" />
+          <div className="absolute inset-0 bg-[#0A0E14]/90" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-6">
           <Reveal>
             <Label color="blue">После тренинга</Label>
             <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-center mb-14 uppercase">Что ты получишь</h2>
