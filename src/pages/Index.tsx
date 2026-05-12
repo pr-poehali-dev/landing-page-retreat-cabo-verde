@@ -335,11 +335,11 @@ export default function Index() {
         </div>
       </section>
 
-      {/* СООБЩЕСТВО — фон с людьми на пирсе */}
+      {/* СООБЩЕСТВО — реальное фото с тренинга */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={PIER_IMG} alt="Люди на пирсе" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14]/80 via-[#0A0E14]/65 to-[#0A0E14]" />
+          <img src="https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/bucket/2114ea36-ed7e-44c9-aecf-502b607d5643.jpg" alt="Участники тренинга" className="w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14]/85 via-[#0A0E14]/70 to-[#0A0E14]" />
         </div>
         <div className="relative max-w-4xl mx-auto px-6">
           <Reveal>
@@ -351,19 +351,19 @@ export default function Index() {
               Рядом с тобой будут люди, которые тоже выбрали честность с собой. Не случайная группа — выбранное окружение, которое становится частью твоего нового пути.
             </p>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4 items-stretch">
             {[
               { icon: "Heart", title: "Живой контакт", desc: "4 дня настоящего, без масок и социальных ролей.", color: "orange" },
               { icon: "Zap", title: "Общая энергия", desc: "Группа усиливает каждого — это не метафора, это физика.", color: "blue" },
               { icon: "Users", title: "После тренинга", desc: "Люди остаются в контакте. Сообщество продолжает жить.", color: "gold" },
             ].map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.12}>
-                <div className={`bg-white/5 backdrop-blur-sm border border-white/10 p-7 hover:bg-white/10 transition-colors duration-300`}>
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
-                    <Icon name={item.icon as "Heart"} size={18} className={ACCENT[item.color as keyof typeof ACCENT].text} />
+              <Reveal key={item.title} delay={i * 0.12} className="flex">
+                <div className={`flex flex-col w-full bg-white/8 backdrop-blur-sm border border-white/12 p-8 hover:bg-white/12 transition-colors duration-300`}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-5 flex-shrink-0 ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
+                    <Icon name={item.icon as "Heart"} size={20} className={ACCENT[item.color as keyof typeof ACCENT].text} />
                   </div>
-                  <p className="font-display text-lg text-white font-bold uppercase mb-2">{item.title}</p>
-                  <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="font-display text-xl text-white font-bold uppercase mb-3">{item.title}</p>
+                  <p className="text-white/55 text-sm leading-relaxed flex-1">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -436,7 +436,7 @@ export default function Index() {
             <Label color="blue">После тренинга</Label>
             <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-center mb-14 uppercase">Что ты получишь</h2>
           </Reveal>
-          <div className="grid md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 items-stretch">
             {[
               { icon: "Sun", label: "Внутреннюю ясность", color: "gold" },
               { icon: "Wind", label: "Спокойствие вместо напряжения", color: "blue" },
@@ -444,12 +444,12 @@ export default function Index() {
               { icon: "TrendingUp", label: "Новый взгляд на деньги", color: "red" },
               { icon: "Anchor", label: "Внутреннюю опору", color: "gold" },
             ].map((item, i) => (
-              <Reveal key={item.label} delay={i * 0.08}>
-                <div className={`bg-[#0A0E14] p-7 text-center hover:scale-105 transition-transform duration-300 border-b-2 ${ACCENT[item.color as keyof typeof ACCENT].border}`}>
-                  <div className={`w-12 h-12 mx-auto mb-4 rounded-xl flex items-center justify-center ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
-                    <Icon name={item.icon as "Sun"} size={22} className={ACCENT[item.color as keyof typeof ACCENT].text} />
+              <Reveal key={item.label} delay={i * 0.08} className="flex">
+                <div className={`flex flex-col items-center w-full bg-[#0D1119] p-7 text-center hover:scale-105 transition-transform duration-300 border-b-4 ${ACCENT[item.color as keyof typeof ACCENT].border}`}>
+                  <div className={`w-14 h-14 mx-auto mb-5 rounded-xl flex items-center justify-center flex-shrink-0 ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
+                    <Icon name={item.icon as "Sun"} size={24} className={ACCENT[item.color as keyof typeof ACCENT].text} />
                   </div>
-                  <p className="text-white/65 text-xs leading-relaxed">{item.label}</p>
+                  <p className="text-white/75 text-xs leading-relaxed font-medium flex-1 flex items-center">{item.label}</p>
                 </div>
               </Reveal>
             ))}
