@@ -123,7 +123,7 @@ export default function Index() {
             6–9 августа · Атлантический океан
           </div>
 
-          <h1 className="font-display text-[clamp(3.8rem,16vw,12rem)] leading-[0.85] font-bold text-white tracking-tight mb-5 uppercase"
+          <h1 className="font-display text-[clamp(2.8rem,13vw,12rem)] leading-[0.85] font-bold text-white tracking-tight mb-5 uppercase w-full"
             style={{ opacity: 0, animation: "fadeUp 1s ease 0.4s forwards" }}>
             Пере<span className="text-[#C9A84C]">про</span>Шивка
           </h1>
@@ -207,8 +207,8 @@ export default function Index() {
       {/* ЧТО ТАКОЕ — фото фон */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={COAST_IMG} alt="" className="w-full h-full object-cover opacity-12" />
-          <div className="absolute inset-0 bg-[#0A0E14]/88" />
+          <img src={COAST_IMG} alt="" className="w-full h-full object-cover opacity-8" />
+          <div className="absolute inset-0 bg-[#0A0E14]/96" />
         </div>
         <div className="relative max-w-3xl mx-auto px-5 text-center">
           <Reveal>
@@ -333,8 +333,8 @@ export default function Index() {
       {/* СООБЩЕСТВО */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={COMMUNITY_IMG} alt="Участники тренинга" className="w-full h-full object-cover object-top" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E14]/88 via-[#0A0E14]/72 to-[#0A0E14]" />
+          <img src={COMMUNITY_IMG} alt="Участники тренинга" className="w-full h-full object-cover object-top opacity-30" />
+          <div className="absolute inset-0 bg-[#0A0E14]/80" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4">
           <Reveal>
@@ -353,12 +353,12 @@ export default function Index() {
               { icon: "Users", title: "После тренинга", desc: "Люди остаются в контакте. Сообщество продолжает жить.", color: "gold" },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1} className="flex">
-                <div className="flex flex-col w-full bg-white/8 backdrop-blur-sm border border-white/12 p-6">
+                <div className="flex flex-col w-full bg-[#0A0E14]/70 border border-white/10 p-6">
                   <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-4 flex-shrink-0 ${ACCENT[item.color as keyof typeof ACCENT].pill}`}>
                     <Icon name={item.icon as "Heart"} size={18} className={ACCENT[item.color as keyof typeof ACCENT].text} />
                   </div>
                   <p className="font-display text-lg text-white font-bold uppercase mb-2">{item.title}</p>
-                  <p className="text-white/50 text-sm leading-relaxed flex-1">{item.desc}</p>
+                  <p className="text-white/55 text-sm leading-relaxed flex-1">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
