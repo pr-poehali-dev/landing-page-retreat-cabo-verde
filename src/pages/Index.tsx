@@ -670,7 +670,7 @@ export default function Index() {
             </p>
             <p className="text-white/20 text-xs mb-12 tracking-widest uppercase">6–9 августа · Кабо-Верде</p>
             <a
-              href="https://t.me/dmitriyhara"
+              href="https://t.me/Marinakirsa"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-12 py-5 bg-[#C9A84C] text-[#0A0E14] text-xs tracking-[0.3em] uppercase font-bold hover:bg-[#E8D5A3] transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(201,168,76,0.3)]"
