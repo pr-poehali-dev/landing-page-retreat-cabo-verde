@@ -14,6 +14,7 @@ const CITY_AERIAL_IMG  = "https://cdn.poehali.dev/files/f5375d5c-bb56-4372-8ae3-
 const MOUNTAIN_TOWN_IMG = "https://cdn.poehali.dev/files/032dd4c5-51ef-4c9f-95c2-96918c4b621e.jpg";
 const PORT_AERIAL_IMG  = "https://cdn.poehali.dev/files/cae362a0-67ee-4f68-9a9c-4fa4c688e5d8.jpg";
 const COMMUNITY_IMG    = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/bucket/2114ea36-ed7e-44c9-aecf-502b607d5643.jpg";
+const MARINA_IMG       = "https://cdn.poehali.dev/projects/c2c2486d-0d04-4aab-b2bb-3d076133e4f2/bucket/a173c962-f1b5-4cdc-aedb-c9c303e84aa9.jpg";
 
 const TG_LINK = "https://t.me/Marinakirsa";
 
@@ -224,26 +225,25 @@ export default function Index() {
         </div>
       </section>
 
-      {/* АВТОР */}
-      <section id="author" className="py-20 px-4 bg-[#0A0E14]">
+      {/* ВЕДУЩАЯ — Марина Кирсанова */}
+      <section className="py-20 px-4 bg-[#0A0E14]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
             <div className="relative max-w-sm mx-auto md:max-w-none">
-              <div className="absolute -inset-1 bg-gradient-to-br from-[#C9A84C]/30 via-transparent to-[#0EA5E9]/20" />
-              <img src={DMITRY_IMG} alt="Дмитрий Хара" className="relative w-full aspect-[3/4] object-cover object-top" />
+              <div className="absolute -inset-1 bg-gradient-to-br from-[#C9A84C]/30 via-transparent to-[#F97316]/20" />
+              <img src={MARINA_IMG} alt="Марина Кирсанова" className="relative w-full aspect-[3/4] object-cover object-top" />
               <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-[#0A0E14]" />
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <Label>Автор тренинга</Label>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-white uppercase mb-1">Дмитрий</h2>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-[#C9A84C] uppercase mb-7">Хара</h2>
+            <Label color="orange">Ведущая тренинга</Label>
+            <h2 className="font-display text-5xl md:text-6xl font-bold text-white uppercase mb-1">Марина</h2>
+            <h2 className="font-display text-5xl md:text-6xl font-bold text-[#C9A84C] uppercase mb-7">Кирсанова</h2>
             <ul className="space-y-3 mb-8">
               {[
-                { text: "Автор тренинга «ПерепроШивка»", color: "gold" },
-                { text: "Писатель: «П.Ш.», «Трэш», «Сияние»", color: "blue" },
-                { text: "Автор практики «Шодхан»", color: "orange" },
-                { text: "Проводит программы с 2013 года", color: "gold" },
+                { text: "Сертифицированный тренер «ПерепроШивки»", color: "gold" },
+                { text: "Бизнес-наставник с колоссальным опытом", color: "orange" },
+                { text: "Помогает людям выйти на новый уровень жизни", color: "blue" },
               ].map((item) => (
                 <li key={item.text} className="flex items-start gap-3 text-white/65 text-sm">
                   <span className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${ACCENT[item.color as keyof typeof ACCENT].bg}`} />
@@ -251,8 +251,44 @@ export default function Index() {
                 </li>
               ))}
             </ul>
-            <blockquote className="border-l-4 border-[#C9A84C] pl-5 bg-[#C9A84C]/5 py-4 pr-4">
-              <p className="text-sm italic text-white/80 leading-relaxed font-light">
+            <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[#C9A84C]/50 text-[#C9A84C] text-xs tracking-[0.22em] uppercase hover:bg-[#C9A84C]/10 transition-all duration-300">
+              <Icon name="Send" size={13} />
+              Написать Марине
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* АВТОР */}
+      <section id="author" className="py-14 px-4 bg-[#07090D]">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[280px_1fr] gap-8 md:gap-12 items-center">
+          <Reveal>
+            <div className="relative max-w-[260px] mx-auto md:max-w-none">
+              <div className="absolute -inset-1 bg-gradient-to-br from-[#C9A84C]/20 via-transparent to-[#0EA5E9]/15" />
+              <img src={DMITRY_IMG} alt="Дмитрий Хара" className="relative w-full aspect-[3/4] object-cover object-top" />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-[#07090D]" />
+            </div>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <Label>Автор тренинга</Label>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white uppercase mb-1">Дмитрий</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#C9A84C] uppercase mb-5">Хара</h2>
+            <ul className="space-y-2.5 mb-6">
+              {[
+                { text: "Автор тренинга «ПерепроШивка»", color: "gold" },
+                { text: "Писатель: «П.Ш.», «Трэш», «Сияние»", color: "blue" },
+                { text: "Автор практики «Шодхан»", color: "orange" },
+                { text: "Проводит программы с 2013 года", color: "gold" },
+              ].map((item) => (
+                <li key={item.text} className="flex items-start gap-3 text-white/60 text-sm">
+                  <span className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${ACCENT[item.color as keyof typeof ACCENT].bg}`} />
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+            <blockquote className="border-l-4 border-[#C9A84C] pl-4 bg-[#C9A84C]/5 py-3 pr-4">
+              <p className="text-sm italic text-white/70 leading-relaxed font-light">
                 «Невозможно придумать своё предназначение. Его можно только почувствовать».
               </p>
             </blockquote>
