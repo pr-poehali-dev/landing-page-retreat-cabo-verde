@@ -340,7 +340,7 @@ export const translations: Record<Lang, Translations> = {
   },
   en: {
     nav: {
-      brand: "ReWired",
+      brand: "Reprogramming",
       links: [
         { id: "program", label: "Program" },
         { id: "gallery", label: "Location" },
@@ -353,8 +353,8 @@ export const translations: Record<Lang, Translations> = {
     hero: {
       badge: "August 6–9 · Atlantic Ocean",
       titlePart1: "Re",
-      titleAccent: "WIRE",
-      titlePart3: "d",
+      titleAccent: "programm",
+      titlePart3: "ing",
       subtitlePrefix: "A retreat transformation training by ",
       subtitleAccent: "Dmitry Khara",
       subtitleSuffix: " in Cabo Verde",
@@ -382,14 +382,14 @@ export const translations: Record<Lang, Translations> = {
       label: "The Essence of the Training",
       title1: "This isn't motivation.",
       title2: "It's re-living yourself.",
-      description: "\"ReWired\" is Dmitry Khara's signature training that helps remove inner limitations, break free from life on autopilot, and restore clarity and contact with your true self.",
+      description: "\"Reprogramming\" is Dmitry Khara's signature training that helps remove inner limitations, break free from life on autopilot, and restore clarity and contact with your true self.",
     },
     mentor: {
       label: "Training Facilitator",
       firstName: "Marina",
       lastName: "Kirsanova",
       bullets: [
-        "Certified \"ReWired\" trainer",
+        "Certified \"Reprogramming\" trainer",
         "Business mentor with vast experience",
         "Helps people step into a new level of life",
       ],
@@ -400,7 +400,7 @@ export const translations: Record<Lang, Translations> = {
       firstName: "Dmitry",
       lastName: "Khara",
       bullets: [
-        "Author of the \"ReWired\" training",
+        "Author of the \"Reprogramming\" training",
         "Writer: \"P.S.\", \"Trash\", \"Radiance\"",
         "Creator of the \"Shodhan\" practice",
         "Running programs since 2013",
@@ -465,9 +465,9 @@ export const translations: Record<Lang, Translations> = {
     },
     film: {
       label: "Watch Before You Apply",
-      title: "\"ReWired\" — The Film",
+      title: "\"Reprogramming\" — The Film",
       description: "A documentary about how the training works and what really happens with participants.",
-      iframeTitle: "ReWired Film",
+      iframeTitle: "Reprogramming Film",
     },
     pricing: {
       label: "Ways to Join",
@@ -509,7 +509,7 @@ export const translations: Record<Lang, Translations> = {
       cta: "Apply Now",
     },
     footer: {
-      brand: "ReWired",
+      brand: "Reprogramming",
       location: "Cabo Verde · August 6–9, 2025",
       copyright: "© Dmitry Khara",
     },
